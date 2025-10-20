@@ -35,3 +35,7 @@ vim.opt.updatetime = 700
 vim.opt.termguicolors = true
 
 vim.opt.winborder = "rounded"
+
+-- for some whitespaces
+vim.o.list = true
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }

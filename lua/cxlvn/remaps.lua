@@ -40,3 +40,9 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 
 -- make scripts executable within neovim
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", {silent = true})
+
+-- lsp keymaps
+vim.keymap.set('n', 'K',  vim.lsp.buf.hover,          { desc = 'LSP hover' })
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition,     { desc = 'LSP definition' })
+vim.keymap.set('n', 'gr', vim.lsp.buf.references,     { desc = 'LSP references' })
+vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { desc = 'LSP rename' })
