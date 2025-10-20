@@ -20,6 +20,8 @@ require("lazy").setup({
     spec = {
         { import = "cxlvn.plugins" },
     },
-
+    change_detection = {
+        enabled = false,
+    },
     checker = { enabled = false },
 })
