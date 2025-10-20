@@ -14,8 +14,8 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.opt.scroll = 5
 
 -- same thing with n and N while searching
-vim.keymap.set("n", "n", "nzz")
-vim.keymap.set("n", "N", "Nzz")
+-- vim.keymap.set("n", "n", "nzz")
+-- vim.keymap.set("n", "N", "Nzz")
 -- escape to remove the higlights
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
