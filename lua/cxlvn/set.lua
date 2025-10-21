@@ -32,6 +32,7 @@ vim.o.smartcase = true
 
 -- screen lines to keep above and below the cursor
 vim.o.scrolloff = 8
+vim.o.scroll = 5
 
 -- setting a colorscheme
 vim.cmd.colorscheme("vague")
