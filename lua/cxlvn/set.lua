@@ -1,9 +1,13 @@
 -- duh
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
-vim.opt.softtabstop = 4
+vim.opt.softtabstop = 2
 vim.opt.smartindent = true
+vim.opt.swapfile = false
+
+-- nice lil corners
+vim.o.winborder = "rounded"
 
 -- break indent
 vim.o.breakindent = true
@@ -20,7 +24,7 @@ vim.wo.relativenumber = true
 
 -- sync clipboard
 vim.schedule(function()
-	vim.o.clipboard = "unnamedplus"
+  vim.o.clipboard = "unnamedplus"
 end)
 
 -- nerd fonts

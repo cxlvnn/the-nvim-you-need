@@ -8,7 +8,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- reload config
 vim.api.nvim_create_user_command("ReloadConfig", function()
-  for name,_ in pairs(package.loaded) do
+  for name, _ in pairs(package.loaded) do
     if name:match("^cxlvn") then
       package.loaded[name] = nil
     end

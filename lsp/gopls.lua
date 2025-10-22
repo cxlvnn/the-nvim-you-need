@@ -8,7 +8,7 @@ return {
         unusedparams = true,
         shadow       = true,
       },
-      staticcheck  = true,
+      staticcheck  = false,
       gofumpt      = true,      -- stricter fmt
       usePlaceholders = true,   -- snip-friendly
     },

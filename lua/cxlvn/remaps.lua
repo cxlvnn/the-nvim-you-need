@@ -18,6 +18,11 @@ vim.keymap.set("n", "N", "Nzz")
 -- escape to remove the higlights
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+-- write to a file
+vim.keymap.set("n", "<leader>w", ":write<CR>")
+-- update and source
+vim.keymap.set("n", "<leader>o", ":update<cr> :source<cr>")
+
 -- switch between windows using the ctrl hjkl
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
@@ -36,6 +41,10 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- not losing paste buffer when pasting
 vim.keymap.set("x", "<leader>p", '"_dP')
+-- format
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+-- copy whole file
+vim.keymap.set("n", "<leader>cp", "ggVGy")
 
 -- make scripts executable within neovim
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
