@@ -6,6 +6,16 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- format on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+  group = vim.api.nvim_create_augroup("LspFormatting", { clear = true }),
+  callback = function(args)
+    if vim.bo[args.buf].buftype ~= "nofile" then
+      vim.lsp.buf.format({ bufnr = args.buf, async = false })
+    end
+  end,
+})
+
 -- reload config
 vim.api.nvim_create_user_command("ReloadConfig", function()
   for name, _ in pairs(package.loaded) do

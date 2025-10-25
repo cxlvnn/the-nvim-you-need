@@ -4,13 +4,13 @@ return {
   root_markers = { 'go.mod', '.git' },
   settings = {
     gopls = {
-      analyses = {
+      analyses        = {
         unusedparams = true,
         shadow       = true,
       },
-      staticcheck  = false,
-      gofumpt      = true,      -- stricter fmt
-      usePlaceholders = true,   -- snip-friendly
+      staticcheck     = false,
+      gofumpt         = true,  -- stricter fmt
+      usePlaceholders = false, -- snip-friendly
     },
   },
 }

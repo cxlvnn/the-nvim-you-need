@@ -5,6 +5,7 @@ vim.lsp.enable({
   "clangd",
   "cmake",
   "rust-analyzer",
+  "html-lsp",
 })
 
 vim.diagnostic.config({

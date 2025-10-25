@@ -44,7 +44,3 @@ vim.cmd.colorscheme("vague")
 vim.opt.updatetime = 250
 vim.o.timeoutlen = 300
 vim.opt.termguicolors = true
-
--- -- for some whitespaces
-vim.o.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }

@@ -53,11 +53,16 @@ return {
   filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
   root_markers = {
     '.clangd',
-    '.clang-tidy',
     '.clang-format',
     'compile_commands.json',
     'compile_flags.txt',
-    'configure.ac', -- AutoTools
+    'configure.ac',
+    '--background-index',
+    '--clang-tidy',
+    '--header-insertion=never',
+    '--completion-style=detailed',
+    '--fallback-style=llvm',
+    "--function-arg-placeholders=0",
     '.git',
   },
   capabilities = {
