@@ -6,13 +6,6 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
   },
 
-  -- vague 2k colorscheme
-  {
-    "vague2k/vague.nvim",
-    lazy = false,
-    priority = 1000,
-  },
-
   -- treesitter
   {
     "nvim-treesitter/nvim-treesitter",
@@ -127,6 +120,11 @@ return {
   },
 
   -- autoclose
-  { 'windwp/nvim-autopairs', event = 'InsertEnter', opts = {} }
+  { 'windwp/nvim-autopairs', event = 'InsertEnter', opts = {} },
 
+  -- lualine
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+  },
 }
