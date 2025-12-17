@@ -81,6 +81,9 @@ return {
 
       sources = {
         default = { 'lsp', 'path', 'snippets', 'lazydev' },
+        per_filetype = {
+          php = { 'lsp', 'path', 'snippets', 'lazydev' },
+        },
         providers = {
           lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
         },
@@ -127,4 +130,18 @@ return {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' }
   },
+
+  -- live server for html, css, js
+  {
+    'barrett-ruth/live-server.nvim',
+    build = 'pnpm add -g live-server',
+    cmd = { 'LiveServerStart', 'LiveServerStop' },
+    config = true
+  },
+
+  -- emmet helper
+  {
+    "olrtg/nvim-emmet",
+    ft = { "html", "css", "javascriptreact", "typescriptreact", "vue", "svelte" },
+  }
 }
