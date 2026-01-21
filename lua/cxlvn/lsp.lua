@@ -10,6 +10,7 @@ vim.lsp.enable({
   "emmet-language-server",
   "emmet-ls",
   "intelephense",
+  "pyright",
 })
 
 vim.diagnostic.config({

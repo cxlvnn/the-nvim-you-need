@@ -21,13 +21,15 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<cr>")
 -- write to a file
 vim.keymap.set("n", "<leader>w", ":write<cr>")
 -- update and source
-vim.keymap.set("n", "<leader>o", ":update<cr> :source<cr>")
+vim.keymap.set("n", "<leader>so", ":update<cr> :source<cr>")
 -- quit
 vim.keymap.set("n", "<leader>q", ":quit<cr>")
 -- select all
 vim.keymap.set("n", "<leader>sa", "ggVG")
 -- copy whole file
 vim.keymap.set("n", "<leader>cp", "ggVGy")
+-- delete whole file
+vim.keymap.set("n", "<leader>da", "ggVGd")
 -- not losing paste buffer when pasting
 vim.keymap.set("x", "<leader>p", '"_dP')
 -- format
@@ -58,3 +60,7 @@ vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "LSP definition" })
 vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "LSP references" })
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP rename" })
 vim.keymap.set("n", "shd", vim.diagnostic.open_float, { desc = "show diagnostics" })
+
+-- creating a blank line without going into insert mode
+vim.keymap.set("n", "<leader>o", ":put _<cr>");
+vim.keymap.set("n", "<leader>O", ":put! _<cr>");
