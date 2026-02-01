@@ -42,7 +42,7 @@ vim.o.scrolloff = 8
 vim.o.scroll = 5
 
 -- setting a colorscheme
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("vague")
 require('lualine').setup {
   options = {
     theme = 'catppuccin'

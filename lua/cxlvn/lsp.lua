@@ -11,6 +11,7 @@ vim.lsp.enable({
   "emmet-ls",
   "intelephense",
   "pyright",
+  "nixd"
 })
 
 vim.diagnostic.config({
