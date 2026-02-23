@@ -8,10 +8,11 @@ vim.lsp.enable({
   "html-lsp",
   "typescript-language-server",
   "emmet-language-server",
-  "emmet-ls",
   "intelephense",
   "pyright",
-  "nixd"
+  "nixd",
+  "laravel-ls",
+  "bashls",
 })
 
 vim.diagnostic.config({
