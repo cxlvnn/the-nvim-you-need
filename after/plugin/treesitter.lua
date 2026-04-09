@@ -1,3 +1,12 @@
+vim.filetype.add({
+    pattern = { [".*%.blade%.php"] = "blade" },
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "blade",
+    callback = function() vim.treesitter.start() end,
+})
+
 require("nvim-treesitter").setup({
 	ensure_installed = {
 		"html",
@@ -17,7 +26,7 @@ require("nvim-treesitter").setup({
 
 	highlight = {
 		enable = true,
-		additional_vim_regex_highlighting = false,
+		additional_vim_regex_highlighting = "blade",
 	},
 
 	indent = {

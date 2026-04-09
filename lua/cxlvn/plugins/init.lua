@@ -2,7 +2,7 @@ return {
   -- telescope
   {
     "nvim-telescope/telescope.nvim",
-    tag = "0.1.8",
+    branch = "master",
     dependencies = { "nvim-lua/plenary.nvim" },
   },
 
@@ -19,6 +19,9 @@ return {
     lazy = false,
     build = ":TSUpdate",
   },
+
+  -- blade treesitter
+  { "EmranMR/tree-sitter-blade" },
 
   -- undotree
   { "mbbill/undotree" },
