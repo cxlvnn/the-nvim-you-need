@@ -5,6 +5,7 @@ vim.opt.expandtab = true
 vim.opt.softtabstop = 2
 vim.opt.smartindent = true
 vim.opt.swapfile = false
+vim.opt.guicursor = ""
 
 -- dont show mode
 vim.o.showmode = false
@@ -43,11 +44,6 @@ vim.o.scroll = 5
 
 -- setting a colorscheme
 vim.cmd.colorscheme("vague")
-require('lualine').setup {
-  options = {
-    theme = 'catppuccin'
-  }
-}
 vim.api.nvim_set_hl(0, 'NeoTreeWinSeparator', { fg = '#323232', bg = '#010101' })
 
 vim.opt.updatetime = 250

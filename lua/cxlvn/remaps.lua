@@ -32,8 +32,6 @@ vim.keymap.set("n", "<leader>cp", "ggVGy")
 vim.keymap.set("n", "<leader>da", "ggVGd")
 -- not losing paste buffer when pasting
 vim.keymap.set("x", "<leader>p", '"_dP')
--- format
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- make scripts executable within neovim
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<cr>", { silent = true })
@@ -44,6 +42,7 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 vim.keymap.set("i", "jk", "<Esc>", { desc = "jk to go back to normal mode" })
+
 vim.keymap.set("n", ";", ":", { desc = "; to command mode in normal mode" })
 
 -- working with tabs
@@ -62,5 +61,5 @@ vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP rename" })
 vim.keymap.set("n", "shd", vim.diagnostic.open_float, { desc = "show diagnostics" })
 
 -- creating a blank line without going into insert mode
-vim.keymap.set("n", "<leader>o", ":put _<cr>");
-vim.keymap.set("n", "<leader>O", ":put! _<cr>");
+vim.keymap.set("n", "<leader>o", ":put _<cr>")
+vim.keymap.set("n", "<leader>O", ":put! _<cr>")

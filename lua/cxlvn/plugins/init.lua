@@ -6,10 +6,16 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
   },
 
+  -- formatter
+  {
+    'stevearc/conform.nvim',
+    opts = {},
+  },
+
   -- treesitter
   {
     "nvim-treesitter/nvim-treesitter",
-    branch = "master",
+    branch = "main",
     lazy = false,
     build = ":TSUpdate",
   },
@@ -161,5 +167,14 @@ return {
     config = function()
       require("laravel").setup()
     end,
+  },
+
+  {
+    "willyelm/pulse.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {},
+    keys = {
+      { "<leader>pu", "<cmd>Pulse<cr>", desc = "Open Pulse" },
+    },
   }
 }

@@ -9,6 +9,7 @@ vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Fi
 vim.keymap.set('n', '<leader>fd', function()
   require('telescope.builtin').find_files({ cwd = vim.fn.expand('%:p:h') })
 end, { desc = 'Find files in current directory' })
+
 vim.keymap.set('n', '<leader>sn', function()
   builtin.find_files { cwd = vim.fn.stdpath 'config' }
 end, { desc = '[S]earch [N]eovim files' })
