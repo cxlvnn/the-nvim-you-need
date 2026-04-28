@@ -43,7 +43,6 @@ vim.o.scrolloff = 8
 vim.o.scroll = 5
 
 -- setting a colorscheme
-vim.cmd.colorscheme("vague")
 vim.api.nvim_set_hl(0, 'NeoTreeWinSeparator', { fg = '#323232', bg = '#010101' })
 
 vim.opt.updatetime = 250

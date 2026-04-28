@@ -6,6 +6,21 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
   },
 
+  -- telescope file browser
+  {
+    "nvim-telescope/telescope-file-browser.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+  },
+
+  -- todo
+  {
+    "atiladefreitas/dooing",
+    config = function()
+      require("dooing").setup({
+      })
+    end,
+  },
+
   -- formatter
   {
     'stevearc/conform.nvim',
@@ -19,9 +34,6 @@ return {
     lazy = false,
     build = ":TSUpdate",
   },
-
-  -- blade treesitter
-  { "EmranMR/tree-sitter-blade" },
 
   -- undotree
   { "mbbill/undotree" },
@@ -171,6 +183,11 @@ return {
       require("laravel").setup()
     end,
   },
+
+  -- {
+  --   'ricardoramirezr/blade-nav.nvim',
+  --   ft = { 'blade', 'blade.php' },
+  -- },
 
   {
     "willyelm/pulse.nvim",

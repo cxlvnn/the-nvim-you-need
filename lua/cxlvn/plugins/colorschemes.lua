@@ -6,6 +6,8 @@ return {
     priority = 1000,
   },
 
+  { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+
   -- midnight
   {
     'dasupradyumna/midnight.nvim',
@@ -67,4 +69,7 @@ return {
       },
     },
   },
+
+  { 'projekt0n/github-nvim-theme', name = 'github-theme' }
+
 }
