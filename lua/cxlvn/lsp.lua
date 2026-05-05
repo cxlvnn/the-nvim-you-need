@@ -14,7 +14,8 @@ vim.lsp.enable({
   "laravel-ls",
   "bashls",
   "tailwindcss-language-server",
-  "type-script"
+  "type-script",
+  "zls",
 })
 
 vim.diagnostic.config({

@@ -32,6 +32,8 @@ vim.keymap.set("n", "<leader>cp", "ggVGy")
 vim.keymap.set("n", "<leader>da", "ggVGd")
 -- not losing paste buffer when pasting
 vim.keymap.set("x", "<leader>p", '"_dP')
+-- switch between your recent files
+vim.keymap.set("n", "<leader>fr", ":e #<CR>")
 
 -- make scripts executable within neovim
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<cr>", { silent = true })
