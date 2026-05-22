@@ -1,200 +1,199 @@
 return {
-  -- telescope
-  {
-    "nvim-telescope/telescope.nvim",
-    branch = "master",
-    dependencies = { "nvim-lua/plenary.nvim" },
-  },
+	-- telescope
+	{
+		"nvim-telescope/telescope.nvim",
+		branch = "master",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
 
-  -- telescope file browser
-  {
-    "nvim-telescope/telescope-file-browser.nvim",
-    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-  },
+	-- telescope file browser
+	{
+		"nvim-telescope/telescope-file-browser.nvim",
+		dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+	},
 
-  -- todo
-  {
-    "atiladefreitas/dooing",
-    config = function()
-      require("dooing").setup({
-      })
-    end,
-  },
+	-- todo
+	{
+		"atiladefreitas/dooing",
+		config = function()
+			require("dooing").setup({})
+		end,
+	},
 
-  -- formatter
-  {
-    'stevearc/conform.nvim',
-    opts = {},
-  },
+	-- formatter
+	{
+		"stevearc/conform.nvim",
+		opts = {},
+	},
 
-  -- treesitter
-  {
-    "nvim-treesitter/nvim-treesitter",
-    branch = "main",
-    lazy = false,
-    build = ":TSUpdate",
-  },
+	-- treesitter
+	{
+		"nvim-treesitter/nvim-treesitter",
+		branch = "main",
+		lazy = false,
+		build = ":TSUpdate",
+	},
 
-  -- undotree
-  { "mbbill/undotree" },
+	-- undotree
+	{ "mbbill/undotree" },
 
-  -- neo-tree
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-      "nvim-tree/nvim-web-devicons",
-    },
-    lazy = false,
-  },
+	-- neo-tree
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"MunifTanjim/nui.nvim",
+			"nvim-tree/nvim-web-devicons",
+		},
+		lazy = false,
+	},
 
-  -- fidget for notifications and lsp progresses
-  { "j-hui/fidget.nvim",        opts = {} },
+	-- fidget for notifications and lsp progresses
+	{ "j-hui/fidget.nvim", opts = {} },
 
-  -- for tabstops
-  { "NMAC427/guess-indent.nvim" },
+	-- for tabstops
+	{ "NMAC427/guess-indent.nvim" },
 
-  -- main lsp
-  {
-    "neovim/nvim-lspconfig",
-  },
+	-- main lsp
+	{
+		"neovim/nvim-lspconfig",
+	},
 
-  -- lazygit
-  { "kdheepak/lazygit.nvim", },
+	-- lazygit
+	{ "kdheepak/lazygit.nvim" },
 
-  { -- Autocompletion
-    'saghen/blink.cmp',
-    event = 'VimEnter',
-    version = '1.*',
-    dependencies = {
-      {
-        'L3MON4D3/LuaSnip',
-        version = '2.*',
-        build = (function()
-          return 'make install_jsregexp'
-        end)(),
-        dependencies = {
-          {
-            'rafamadriz/friendly-snippets',
-            config = function()
-              require('luasnip.loaders.from_vscode').lazy_load()
-            end,
-          },
-        },
-        opts = {},
-      },
-      'folke/lazydev.nvim',
-    },
-    opts = {
-      keymap = {
-        preset = 'super-tab',
-      },
+	{ -- Autocompletion
+		"saghen/blink.cmp",
+		event = "VimEnter",
+		version = "1.*",
+		dependencies = {
+			{
+				"L3MON4D3/LuaSnip",
+				version = "2.*",
+				build = (function()
+					return "make install_jsregexp"
+				end)(),
+				dependencies = {
+					{
+						"rafamadriz/friendly-snippets",
+						config = function()
+							require("luasnip.loaders.from_vscode").lazy_load()
+						end,
+					},
+				},
+				opts = {},
+			},
+			"folke/lazydev.nvim",
+		},
+		opts = {
+			keymap = {
+				preset = "super-tab",
+			},
 
-      appearance = {
-        nerd_font_variant = 'mono',
-      },
+			appearance = {
+				nerd_font_variant = "mono",
+			},
 
-      completion = {
-        documentation = { auto_show = true, auto_show_delay_ms = 500 },
-      },
+			completion = {
+				documentation = { auto_show = true, auto_show_delay_ms = 500 },
+			},
 
-      sources = {
-        default = { 'lsp', 'path', 'snippets', 'lazydev' },
-        per_filetype = {
-          php = { 'lsp', 'path', 'snippets', 'lazydev' },
-        },
-        providers = {
-          lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
-        },
-      },
+			sources = {
+				default = { "lsp", "path", "snippets", "lazydev" },
+				per_filetype = {
+					php = { "lsp", "path", "snippets", "lazydev" },
+				},
+				providers = {
+					lazydev = { module = "lazydev.integrations.blink", score_offset = 100 },
+				},
+			},
 
-      snippets = { preset = 'luasnip' },
-      fuzzy = { implementation = 'lua' },
+			snippets = { preset = "luasnip" },
+			fuzzy = { implementation = "lua" },
 
-      signature = { enabled = true },
-    },
-  },
+			signature = { enabled = true },
+		},
+	},
 
-  -- mason
-  {
-    "mason-org/mason.nvim",
-    opts = {}
-  },
+	-- mason
+	{
+		"mason-org/mason.nvim",
+		opts = {},
+	},
 
-  -- gitsigns
-  {
-    'lewis6991/gitsigns.nvim',
-    opts = {
-      signs = {
-        add = { text = '+' },
-        change = { text = '~' },
-        delete = { text = '_' },
-        topdelete = { text = '‾' },
-        changedelete = { text = '~' },
-      },
-    },
-  },
+	-- gitsigns
+	{
+		"lewis6991/gitsigns.nvim",
+		opts = {
+			signs = {
+				add = { text = "+" },
+				change = { text = "~" },
+				delete = { text = "_" },
+				topdelete = { text = "‾" },
+				changedelete = { text = "~" },
+			},
+		},
+	},
 
-  -- neoscroll
-  {
-    "karb94/neoscroll.nvim",
-    opts = {},
-  },
+	-- neoscroll
+	{
+		"karb94/neoscroll.nvim",
+		opts = {},
+	},
 
-  -- autoclose
-  { 'windwp/nvim-autopairs', event = 'InsertEnter', opts = {} },
+	-- autoclose
+	{ "windwp/nvim-autopairs", event = "InsertEnter", opts = {} },
 
-  -- lualine
-  {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' }
-  },
+	-- lualine
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
 
-  -- live server for html, css, js
-  {
-    'barrett-ruth/live-server.nvim',
-    build = 'pnpm add -g live-server',
-    cmd = { 'LiveServerStart', 'LiveServerStop' },
-    config = true
-  },
+	-- live server for html, css, js
+	{
+		"barrett-ruth/live-server.nvim",
+		build = "pnpm add -g live-server",
+		cmd = { "LiveServerStart", "LiveServerStop" },
+		config = true,
+	},
 
-  -- emmet helper
-  {
-    "olrtg/nvim-emmet",
-    ft = { "html", "css", "javascriptreact", "typescriptreact", "vue", "svelte" },
-  },
+	-- emmet helper
+	{
+		"olrtg/nvim-emmet",
+		ft = { "html", "css", "javascriptreact", "typescriptreact", "vue", "svelte" },
+	},
 
-  -- laravel
-  {
-    "adibhanna/laravel.nvim",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-    },
-    keys = {
-      { "<leader>la", ":Artisan<cr>",      desc = "Laravel Artisan" },
-      { "<leader>lc", ":Composer<cr>",     desc = "Composer" },
-      { "<leader>lr", ":LaravelRoute<cr>", desc = "Laravel Routes" },
-      { "<leader>lm", ":LaravelMake<cr>",  desc = "Laravel Make" },
-    },
-    config = function()
-      require("laravel").setup()
-    end,
-  },
+	-- laravel
+	{
+		"adibhanna/laravel.nvim",
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			"nvim-lua/plenary.nvim",
+		},
+		keys = {
+			{ "<leader>la", ":Artisan<cr>", desc = "Laravel Artisan" },
+			{ "<leader>lc", ":Composer<cr>", desc = "Composer" },
+			{ "<leader>lr", ":LaravelRoute<cr>", desc = "Laravel Routes" },
+			{ "<leader>lm", ":LaravelMake<cr>", desc = "Laravel Make" },
+		},
+		config = function()
+			require("laravel").setup()
+		end,
+	},
 
-  -- {
-  --   'ricardoramirezr/blade-nav.nvim',
-  --   ft = { 'blade', 'blade.php' },
-  -- },
+	-- {
+	--   'ricardoramirezr/blade-nav.nvim',
+	--   ft = { 'blade', 'blade.php' },
+	-- },
 
-  {
-    "willyelm/pulse.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = {},
-    keys = {
-      { "<leader>pu", "<cmd>Pulse<cr>", desc = "Open Pulse" },
-    },
-  }
+	{
+		"willyelm/pulse.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {},
+		keys = {
+			{ "<leader>pu", "<cmd>Pulse<cr>", desc = "Open Pulse" },
+		},
+	},
 }

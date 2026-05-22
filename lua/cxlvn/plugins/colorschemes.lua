@@ -33,6 +33,9 @@ return {
 		"DeviusVim/deviuspro.nvim",
 	},
 
+  -- habamax
+  { "ntk148v/habamax.nvim", dependencies={ "rktjmp/lush.nvim" } },
+
 	-- nightfox
 	{
 		"EdenEast/nightfox.nvim",
