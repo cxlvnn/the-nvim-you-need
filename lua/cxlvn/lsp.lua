@@ -15,7 +15,7 @@ vim.lsp.enable({
 	"tailwindcss-language-server",
 	"zls",
   "vue_ls",
-  "ts_ls",
+  "vtsls",
 })
 
 vim.diagnostic.config({
@@ -66,19 +66,14 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	end,
 })
 
+-- Configure vtsls with Vue TypeScript plugin support
+-- vtsls is installed via system package manager (yay on CachyOS)
+-- The Vue plugin is loaded from Mason's vue-language-server package
 local vue_ls_path = vim.fn.expand("$MASON/packages/vue-language-server")
 local vue_ts_plugin_location = vue_ls_path .. "/node_modules/@vue/language-server"
 
-vim.lsp.config["ts_ls"] = {
-	init_options = {
-		plugins = {
-			{
-				name = "@vue/typescript-plugin",
-				location = vue_ts_plugin_location,
-				languages = { "javascript", "typescript", "vue" },
-			},
-		},
-	},
+vim.lsp.config["vtsls"] = {
+	cmd = { "vtsls", "--stdio" },
 	filetypes = {
 		"javascript",
 		"javascriptreact",
@@ -88,6 +83,22 @@ vim.lsp.config["ts_ls"] = {
 		"typescript.tsx",
 		"vue",
 	},
-	root_markers = { "package.json" },
-	single_file_support = false,
+	root_markers = { "package.json", ".git" },
+	init_options = {
+		hostInfo = "neovim",
+	},
+	settings = {
+		vtsls = {
+			tsserver = {
+				globalPlugins = {
+					{
+						name = "@vue/typescript-plugin",
+						location = vue_ts_plugin_location,
+						languages = { "vue" },
+						configNamespace = "typescript",
+					},
+				},
+			},
+		},
+	},
 }

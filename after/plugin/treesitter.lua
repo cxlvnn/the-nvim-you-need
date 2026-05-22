@@ -7,6 +7,8 @@ require("nvim-treesitter").setup({
     "php",
     "javascript",
     "typescript",
+    "tsx",
+    "vue",
     "blade"
   },
 
