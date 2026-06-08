@@ -8,14 +8,14 @@ vim.lsp.enable({
 	"html-lsp",
 	"emmet-language-server",
 	"intelephense",
-	"pyright",
+	"basedpyright",
 	"nixd",
 	"laravel-ls",
 	"bashls",
 	"tailwindcss-language-server",
 	"zls",
-  "vue_ls",
-  "vtsls",
+	"vue_ls",
+	"vtsls",
 })
 
 vim.diagnostic.config({
@@ -66,9 +66,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	end,
 })
 
--- Configure vtsls with Vue TypeScript plugin support
--- vtsls is installed via system package manager (yay on CachyOS)
--- The Vue plugin is loaded from Mason's vue-language-server package
 local vue_ls_path = vim.fn.expand("$MASON/packages/vue-language-server")
 local vue_ts_plugin_location = vue_ls_path .. "/node_modules/@vue/language-server"
 

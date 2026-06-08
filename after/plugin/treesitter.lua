@@ -1,28 +1,26 @@
 require("nvim-treesitter").setup({
-  ensure_installed = {
-    "html",
-    "css",
-    "go",
-    "rust",
-    "php",
-    "javascript",
-    "typescript",
-    "tsx",
-    "vue",
-    "blade"
-  },
+	ensure_installed = {
+		"html",
+		"css",
+		"golang",
+		"rust",
+		"php",
+		"javascript",
+		"typescript",
+		"tsx",
+		"vue",
+		"blade",
+	},
 
-  sync_install = false,
+	sync_install = false,
 
-  auto_install = true,
+	auto_install = true,
 
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = { 'blade' },
-  },
+	highlight = {
+		enable = true,
+	},
 
-  indent = {
-    enable = true,
-  },
+	indent = {
+		enable = true,
+	},
 })
-
