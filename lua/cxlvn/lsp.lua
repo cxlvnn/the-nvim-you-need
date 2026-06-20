@@ -16,6 +16,7 @@ vim.lsp.enable({
 	"zls",
 	"vue_ls",
 	"vtsls",
+	"ols",
 })
 
 vim.diagnostic.config({

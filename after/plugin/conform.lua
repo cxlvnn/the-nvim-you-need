@@ -5,9 +5,10 @@ conform.setup({
 		blade = { "blade-formatter" },
 		lua = { "stylua" },
 		javascript = { "prettierd", "prettier", stop_after_first = true },
-    typescript = { "prettierd", "prettier", stop_after_first = true },
-    vue = { "prettierd", "prettier", stop_after_first = true },
+		typescript = { "prettierd", "prettier", stop_after_first = true },
+		vue = { "prettierd", "prettier", stop_after_first = true },
 		php = { "pint" },
+		python = { "black" },
 	},
 	format_on_save = false,
 })
