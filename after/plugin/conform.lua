@@ -6,6 +6,7 @@ conform.setup({
 		lua = { "stylua" },
 		javascript = { "prettierd", "prettier", stop_after_first = true },
 		typescript = { "prettierd", "prettier", stop_after_first = true },
+		json = { "prettier", "jq" },
 		vue = { "prettierd", "prettier", stop_after_first = true },
 		php = { "pint" },
 		python = { "black" },
