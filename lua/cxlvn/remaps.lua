@@ -65,3 +65,19 @@ vim.keymap.set("n", "shd", vim.diagnostic.open_float, { desc = "show diagnostics
 -- creating a blank line without going into insert mode
 vim.keymap.set("n", "<leader>o", ":put _<cr>")
 vim.keymap.set("n", "<leader>O", ":put! _<cr>")
+
+-- terminal
+vim.keymap.set("n", "<leader>t", function()
+	vim.cmd("botright split")
+	vim.cmd("resize 15")
+	vim.cmd("terminal")
+	vim.cmd("startinsert")
+end, { desc = "open terminal at the bottom" })
+
+vim.keymap.set("t", "jk", "<C-\\><C-n>", { desc = "exit terminal mode" })
+
+-- move between panes without leaving terminal insert mode
+vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h", { desc = "move left from terminal" })
+vim.keymap.set("t", "<C-j>", "<C-\\><C-n><C-w>j", { desc = "move down from terminal" })
+vim.keymap.set("t", "<C-k>", "<C-\\><C-n><C-w>k", { desc = "move up from terminal" })
+vim.keymap.set("t", "<C-l>", "<C-\\><C-n><C-w>l", { desc = "move right from terminal" })
