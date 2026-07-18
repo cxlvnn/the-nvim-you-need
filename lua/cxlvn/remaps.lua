@@ -81,3 +81,9 @@ vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h", { desc = "move left from termi
 vim.keymap.set("t", "<C-j>", "<C-\\><C-n><C-w>j", { desc = "move down from terminal" })
 vim.keymap.set("t", "<C-k>", "<C-\\><C-n><C-w>k", { desc = "move up from terminal" })
 vim.keymap.set("t", "<C-l>", "<C-\\><C-n><C-w>l", { desc = "move right from terminal" })
+
+-- move using hjkl in insert mode
+vim.keymap.set("i", "<M-h>", "<Left>", { desc = "move cursor left" })
+vim.keymap.set("i", "<M-j>", "<Down>", { desc = "move cursor down" })
+vim.keymap.set("i", "<M-k>", "<Up>", { desc = "move cursor up" })
+vim.keymap.set("i", "<M-l>", "<Right>", { desc = "move cursor right" })

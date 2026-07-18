@@ -9,7 +9,7 @@ require("nvim-treesitter").setup({
 		"typescript",
 		"tsx",
 		"vue",
-		"blade",
+		"blade.php",
 	},
 
 	sync_install = false,
