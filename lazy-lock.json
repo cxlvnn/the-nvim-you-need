@@ -19,6 +19,7 @@
   "live-server.nvim": { "branch": "main", "commit": "f1a2defb7bc3bfc37bcb455fafdf6d61113d71c8" },
   "lualine.nvim": { "branch": "master", "commit": "221ce6b2d999187044529f49da6554a92f740a96" },
   "lush.nvim": { "branch": "main", "commit": "9c60ec2279d62487d942ce095e49006af28eed6e" },
+  "markview.nvim": { "branch": "main", "commit": "2471f4097f8561a6880a0fe05ee0f21cbc82b374" },
   "mason.nvim": { "branch": "main", "commit": "16ba83bfc8a25f52bb545134f5bee082b195c460" },
   "midnight.nvim": { "branch": "main", "commit": "fe062a6f2e5bd77cd8a260f61e6e12789eaf4f13" },
   "moonfly": { "branch": "master", "commit": "261664f92ed51cf0c077555b2d4b2530307eac17" },

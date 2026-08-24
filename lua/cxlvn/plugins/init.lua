@@ -196,4 +196,10 @@ return {
 			{ "<leader>pu", "<cmd>Pulse<cr>", desc = "Open Pulse" },
 		},
 	},
+
+	-- markdown viewer
+	{
+		"https://github.com/OXY2DEV/markview.nvim",
+		lazy = false,
+	},
 }

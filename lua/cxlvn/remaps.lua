@@ -87,3 +87,6 @@ vim.keymap.set("i", "<M-h>", "<Left>", { desc = "move cursor left" })
 vim.keymap.set("i", "<M-j>", "<Down>", { desc = "move cursor down" })
 vim.keymap.set("i", "<M-k>", "<Up>", { desc = "move cursor up" })
 vim.keymap.set("i", "<M-l>", "<Right>", { desc = "move cursor right" })
+
+-- remap ; when using f to find a character and going to the next occurance
+vim.keymap.set("n", "'", ";")
