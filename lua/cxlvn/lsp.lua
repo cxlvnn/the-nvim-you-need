@@ -9,7 +9,7 @@ vim.lsp.enable({
 	"emmet-language-server",
 	"intelephense",
 	"basedpyright",
-	"pyright",
+	"ruff",
 	"nixd",
 	"laravel-ls",
 	"bashls",

@@ -102,4 +102,21 @@ return {
 			})
 		end,
 	},
+
+	-- srcery
+	{
+		"srcery-colors/srcery-vim",
+		lazy = false,
+		priority = 1000,
+	},
+
+	-- 12-bit rainbow
+	{
+		"0Risotto/rainbow12",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.cmd("colorscheme rainbow12")
+		end,
+	},
 }
