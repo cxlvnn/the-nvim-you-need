@@ -15,45 +15,6 @@ require("koda").setup({
 	transparent = true,
 })
 
-require("catppuccin").setup({
-	flavour = "mocha",
-	transparent_background = true,
-	show_end_of_buffer = false,
-	term_colors = true,
-	color_overrides = {
-		mocha = {
-			base = "#0a0a0a",
-			mantle = "#070707",
-			crust = "#050505",
-			surface0 = "#1a1a1a",
-		},
-	},
-	custom_highlights = function(colors)
-		return {
-			Normal = { bg = "NONE" },
-			NormalNC = { bg = "NONE" },
-
-			NormalFloat = { bg = colors.mantle },
-			FloatBorder = { bg = colors.mantle, fg = colors.surface0 },
-
-			Pmenu = { bg = colors.mantle, fg = colors.text },
-			PmenuSel = { bg = colors.surface0, fg = "NONE" },
-
-			WinBar = { bg = "NONE" },
-			WinBarNC = { bg = "NONE" },
-			StatusLine = { bg = colors.crust, fg = colors.subtext1 },
-		}
-	end,
-})
-
-vim.api.nvim_create_autocmd("ColorScheme", {
-	pattern = "habamax",
-	callback = function()
-		vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-	end,
-})
-
 vim.api.nvim_create_autocmd("ColorScheme", {
 	pattern = "retrobox",
 	callback = function()

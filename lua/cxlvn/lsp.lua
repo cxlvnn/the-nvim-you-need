@@ -8,7 +8,7 @@ vim.lsp.enable({
 	"html-lsp",
 	"emmet-language-server",
 	"intelephense",
-	"basedpyright",
+	"pyright",
 	"ruff",
 	"nixd",
 	"laravel-ls",
@@ -18,6 +18,7 @@ vim.lsp.enable({
 	"vue_ls",
 	"vtsls",
 	"ols",
+	"djls",
 })
 
 vim.diagnostic.config({
