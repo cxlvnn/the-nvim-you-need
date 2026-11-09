@@ -8,5 +8,6 @@
 return {
 	cmd = { "djls", "serve" },
 	filetypes = { "htmldjango", "html", "python" },
+  root_dir = require("lspconfig.util").root_pattern("manage.py", ".git"),
 	root_markers = { "manage.py", "pyproject.toml", ".git" },
 }
