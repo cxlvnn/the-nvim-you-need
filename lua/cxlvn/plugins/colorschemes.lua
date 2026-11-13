@@ -1,17 +1,25 @@
 return {
-	-- vague
-	{
-		"vague2k/vague.nvim",
-		lazy = false,
-		priority = 1000,
-	},
+  -- vague
+  {
+    "vague2k/vague.nvim",
+    lazy = false,
+    priority = 1000,
+  },
 
-	-- yorumi
-	{
-		"yorumicolors/yorumi.nvim",
-	},
+  -- yorumi
+  {
+    "yorumicolors/yorumi.nvim",
+  },
 
-	{
-		"oskarnurm/koda.nvim",
-	},
+  -- koda
+  {
+    "oskarnurm/koda.nvim",
+  },
+
+  -- poimandres
+  {
+    'olivercederborg/poimandres.nvim',
+    lazy = false,
+    priority = 1000,
+  }
 }
