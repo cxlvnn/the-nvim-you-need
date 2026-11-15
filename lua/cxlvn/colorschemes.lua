@@ -19,6 +19,14 @@ require('poimandres').setup {
   disable_background = true,
 }
 
+require("sora").setup({
+  on_colors = function(colors)
+    colors.bg = "#000000"
+    colors.bg_float = "#000000"
+    colors.bg_statusline = "#000000"
+  end,
+})
+
 
 vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "retrobox",
@@ -28,4 +36,4 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   end,
 })
 
-vim.cmd.colorscheme("poimandres")
+vim.cmd.colorscheme("sora")

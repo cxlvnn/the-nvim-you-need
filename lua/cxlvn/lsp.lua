@@ -4,7 +4,7 @@ vim.lsp.enable({
   "cssls",
   "clangd",
   "cmake",
-  "rust-analyzer",
+  "rust_analyzer",
   "html-lsp",
   "emmet-language-server",
   "intelephense",
